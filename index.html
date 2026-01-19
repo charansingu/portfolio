@@ -751,45 +751,16 @@
         </div>
     </footer>
 
-    <!-- main script + modal handlers -->
+    <!-- main script -->
     <script src="./script.js"></script>
-    <script>
-    // Ensure modal logic runs after DOM load
-    document.addEventListener('DOMContentLoaded', () => {
-        const openBtn = document.getElementById('openJuiceVideo');
-        const closeBtn = document.getElementById('closeJuiceVideo');
-        const modal = document.getElementById('videoModal');
-        const backdrop = document.getElementById('videoBackdrop');
-        const juiceVideo = document.getElementById('juiceVideo');
 
-        function openModal() {
-            if (!modal) return;
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-            try { juiceVideo.currentTime = 0; juiceVideo.play(); } catch (e) {}
-        }
-
-        function closeModal() {
-            if (!modal) return;
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            try { juiceVideo.pause(); juiceVideo.currentTime = 0; } catch (e) {}
-        }
-
-        if (openBtn) openBtn.addEventListener('click', openModal);
-        if (closeBtn) closeBtn.addEventListener('click', closeModal);
-        if (backdrop) backdrop.addEventListener('click', closeModal);
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-    });
-    </script>
-
-    <!-- Add this once near the end of body, before </body> -->
-<div id="videoModal" class="video-modal" aria-hidden="true" role="dialog">
-  <div id="videoBackdrop" class="video-modal-backdrop"></div>
-  <div class="video-modal-content">
-    <button id="closeVideoModal" class="video-modal-close" aria-label="Close">✕</button>
-    <div id="videoModalBody"></div>
-  </div>
-</div>
+    <!-- Single video modal (keep only this one) -->
+    <div id="videoModal" class="video-modal" aria-hidden="true" role="dialog">
+      <div id="videoBackdrop" class="video-modal-backdrop"></div>
+      <div class="video-modal-content">
+        <button id="closeVideoModal" class="video-modal-close" aria-label="Close">✕</button>
+        <div id="videoModalBody"></div>
+      </div>
+    </div>
 </body>
 </html>
