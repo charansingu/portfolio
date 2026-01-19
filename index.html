@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Chowdary Singu - Computer Science Master's Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Minimal modal styles (keeps modal working even if style.css missing modal rules) -->
+    <style>
+    .video-modal { display: none; position: fixed; inset: 0; z-index: 2000; align-items: center; justify-content: center; }
+    .video-modal[aria-hidden="false"] { display: flex; }
+    .video-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); }
+    .video-modal-content { position: relative; width: min(1100px, 95%); max-height: 90vh; overflow: auto; background: #0b0f14; border-radius: 12px; padding: 20px; z-index: 2001; box-shadow: 0 20px 60px rgba(0,0,0,0.4); color: #fff; }
+    .video-modal-close { position: absolute; top: 12px; right: 12px; background: transparent; border: none; font-size: 20px; cursor: pointer; color: #fff; }
+    .project-video { width: 100%; height: auto; border-radius: 8px; background: #000; }
+    @media (max-width: 640px) {
+        .video-modal-content { padding: 12px; }
+    }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span>Charan</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                 <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="pill">
+                        <span class="dot"></span>
+                        Available for opportunities
+                    </p>
+                    <h1 class="hero-title">
+                        Master's Student in <span class="grad">Computer Science</span>
+                    </h1>
+                    <p class="hero-sub">
+                        Passionate about innovation, web development, networking, and cybersecurity. Award-winning projects and hands-on experience.
+                    </p>
+                    <div class="cta-buttons">
+    <a href="./resume.pdf" download="Charan_Chowdary_Resume.pdf" class="btn btn-primary" data-download="cv">
+        📥 Download CV
+    </a>
+    <button class="btn btn-secondary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View My Work</button>
+    <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+</div>
+                </div>
+                
+                <div class="profile-card">
+                    <div class="profile-photo">
+                        <img src="./profile.jpeg" alt="Charan Chowdary Singu">
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Charan Chowdary Singu</h2>
+                        <p class="profile-title">Master's Student</p>
+                        <p class="profile-uni">University College Dublin</p>
+                        
+                        <div class="interests">
+                            <span class="interest-tag">Web Dev</span>
+                            <span class="interest-tag">Networking</span>
+                            <span class="interest-tag">Security</span>
+                            <span class="interest-tag">Innovation</span>
+                        </div>
+
+                        <p class="profile-bio">
+                            Passionate about building innovative solutions. Background in Electronics & Communication Engineering with multiple award-winning projects.
+                        </p>
+
+                        <div class="contact-links">
+                            <a href="tel:+353899580651" class="contact-link">
+                                <span class="contact-icon">📞</span>
+                                <span>+353 89 958 0651</span>
+                            </a>
+                            <a href="mailto:charansingu09@gmail.com" class="contact-link">
+                                <span class="contact-icon">✉️</span>
+                                <span>charansingu09@gmail.com</span>
+                            </a>
+                            <a href="#" class="contact-link">
+                                <span class="contact-icon">📍</span>
+                                <span>Dublin, Ireland</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Professional Summary</h3>
+                    <p>Highly motivated MSc Computer Science graduate with strong hands-on experience in building full-stack, data-driven applications. Specializing in <strong>AI/ML, cloud computing, and modern web technologies</strong>. I design and develop end-to-end systems with expertise in RESTful APIs, React with TypeScript, TailwindCSS, Flask/Spring Boot backends, and cloud deployment using AWS.</p>
+                    
+                    <h3>Education</h3>
+                    <p><strong>Master's in Computer Science</strong> - University College Dublin</p>
+                    <p><strong>Bachelor's in Electronics & Communication Engineering</strong></p>
+                    
+                    <h3>Core Competencies</h3>
+                    <p>Full-stack development • Predictive modeling • API design • Database architecture • Cloud computing (AWS) • Machine Learning • Real-time data processing • Interactive visualizations</p>
+                </div>
+                <div class="achievements">
+                    <h3>Key Strengths</h3>
+                    <ul>
+                        <li>✨ Full-Stack Development (React, Flask, Node.js)</li>
+                        <li>🤖 AI/ML & Predictive Modeling (XGBoost, Scikit-Learn)</li>
+                        <li>☁️ Cloud Deployment (AWS EC2, RDS, Docker)</li>
+                        <li>🔐 Secure Authentication (JWT-based systems)</li>
+                        <li>📊 Data Analytics & Visualization</li>
+                        <li>🚀 Agile Development & Git/GitHub</li>
+                        <li>🎯 Product-Driven & User-Centric Design</li>
+                        <li>🧠 Problem-Solving Mindset</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="education" class="education">
+  <div class="container">
+    <h2>Education</h2>
+    <p class="section-subtitle">Academic foundation with strong emphasis on hands-on, industry-aligned projects</p>
+
+    <div class="education-grid">
+      <!-- MSc at UCD -->
+      <div class="education-card">
+        <div class="education-header">
+          <h3 class="education-degree">MSc in Computer Science</h3>
+          <p class="education-institution">University College Dublin, Ireland</p>
+          <p class="education-duration">Specialised in Web Development, Cloud Computing, and Information Security</p>
+        </div>
+        <p class="education-desc">
+          Completed project-driven modules and industry-aligned applications; recognised with the UCD Advantage Award (2024–2025) for extracurricular and professional engagement.
+        </p>
+        <div class="education-tags">
+          <span class="edu-badge">Web Development</span>
+          <span class="edu-badge">Cloud Computing</span>
+          <span class="edu-badge">InfoSec</span>
+          <span class="edu-badge accent">UCD Advantage Award</span>
+        </div>
+      </div>
+
+      <!-- Bachelor’s at R.M.D. (Anna University) -->
+      <div class="education-card">
+        <div class="education-header">
+          <h3 class="education-degree">Bachelor’s in Computer Science</h3>
+          <p class="education-institution">R.M.D. Engineering College (Anna University)</p>
+          <p class="education-duration">Overall department rank across four academic years</p>
+        </div>
+        <p class="education-desc">
+          Served as a student leader throughout the programme, demonstrating sustained academic excellence, leadership, and initiative.
+        </p>
+        <div class="education-tags">
+          <span class="edu-badge">Academic Excellence</span>
+          <span class="edu-badge">Leadership</span>
+          <span class="edu-badge">Anna University</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Experience Section (Add after About Section, before Projects) -->
+<section id="experience" class="experience">
+  <div class="container">
+    <h2>Professional Experience</h2>
+    <p class="section-subtitle">Real-world innovation and research experience across emerging technologies</p>
+    
+    <div class="experience-grid">
+      <!-- Forge Innovation Experience Card -->
+      <div class="experience-card" data-experience="forge">
+        <div class="experience-header">
+          <div class="experience-title-block">
+            <h3 class="experience-role">Innovation Engineer</h3>
+            <p class="experience-company">Forge Innovation & Ventures</p>
+            <p class="experience-duration">Oct 2023 – May 2024</p>
+          </div>
+          <button class="btn btn-small view-details-btn" data-expand="forge">View More</button>
+        </div>
+        
+        <div class="experience-preview">
+          <p class="experience-summary">Contributed to multiple interdisciplinary projects spanning IoT, embedded systems, UI/UX, fintech, and 3D modelling in a highly collaborative innovation environment.</p>
+          
+          <div class="experience-tech">
+            <span class="tech-badge-small">IoT</span>
+            <span class="tech-badge-small">Embedded Systems</span>
+            <span class="tech-badge-small">UI/UX Design</span>
+            <span class="tech-badge-small">Prototyping</span>
+            <span class="tech-badge-small">Fintech</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NARL Internship Experience Card -->
+      <div class="experience-card" data-experience="narl">
+        <div class="experience-header">
+          <div class="experience-title-block">
+            <h3 class="experience-role">Research Intern</h3>
+            <p class="experience-company">National Atmospheric Research Lab (NARL)</p>
+            <p class="experience-duration">Jun 2023 – Aug 2023</p>
+          </div>
+          <button class="btn btn-small view-details-btn" data-expand="narl">View More</button>
+        </div>
+        
+        <div class="experience-preview">
+          <p class="experience-summary">Worked on mission-critical systems for secure transmission of atmospheric and weather data from NARL to ISRO launch facilities under Scientist-D Munirajulu.</p>
+          
+          <div class="experience-tech">
+            <span class="tech-badge-small">Data Communication</span>
+            <span class="tech-badge-small">Telemetry</span>
+            <span class="tech-badge-small">Systems Design</span>
+            <span class="tech-badge-small">ISRO Integration</span>
+            <span class="tech-badge-small">Research</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UCD Demonstrator Experience Card -->
+      <div class="experience-card" data-experience="ucd-demonstrator">
+        <div class="experience-header">
+          <div class="experience-title-block">
+            <h3 class="experience-role">Demonstrator (Teaching Assistant)</h3>
+            <p class="experience-company">University College Dublin — School of Computer Science</p>
+            <p class="experience-duration">2025 – Present</p>
+          </div>
+          <button class="btn btn-small view-details-btn" data-expand="ucd-demonstrator">View More</button>
+        </div>
+
+        <div class="experience-preview">
+          <p class="experience-summary">
+            Supporting 200+ students across Software Engineering, Web Development, and Operating Systems with hands-on guidance in labs, debugging, and applied learning.
+          </p>
+          <div class="experience-tech">
+            <span class="tech-badge-small">Java</span>
+            <span class="tech-badge-small">Python</span>
+            <span class="tech-badge-small">React</span>
+            <span class="tech-badge-small">TypeScript</span>
+            <span class="tech-badge-small">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Details Modal -->
+<div id="experienceModal" class="experience-modal" aria-hidden="true" role="dialog">
+  <div class="experience-modal-backdrop" id="experienceBackdrop"></div>
+  <div class="experience-modal-content" role="document">
+    <button class="experience-modal-close" id="closeExperienceModal" aria-label="Close">✕</button>
+    <div id="experienceModalBody">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+</div>
+
+   <!-- Projects Section -->
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <p class="section-subtitle">Award-winning projects showcasing innovation in web development, networking, and security</p>
+    
+    <div class="projects-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="ai">AI & Data Science</button>
+      <button class="filter-btn" data-filter="iot">IoT & Hardware</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Dublin Bikes Project -->
+      <div class="project-card" data-category="web,ai">
+        <div class="project-image">
+          <img src="./dublin-bikes.jpeg" alt="Dublin Bikes Project">
+          <div class="project-badge">Distinction Grade</div>
+        </div>
+        <div class="project-content">
+          <h3>Dublin Bikes - Smart Urban Mobility</h3>
+          <p class="project-short-desc">
+            Real-time bike-sharing platform with AI predictions and interactive mapping.
+          </p>
+          
+          <div class="project-org">
+            <span class="org-badge">📍 University College Dublin</span>
+          </div>
+
+          <div class="project-tech-short">
+            <span class="tech-badge-small">Python</span>
+            <span class="tech-badge-small">Flask</span>
+            <span class="tech-badge-small">React</span>
+            <span class="tech-badge-small">Scikit-Learn</span>
+          </div>
+
+          <button class="btn btn-primary btn-small view-details-btn" data-project="dublin-bikes">View Details</button>
+        </div>
+      </div>
+
+      <!-- SmartTrip NYC Project -->
+      <div class="project-card" data-category="web,ai">
+        <div class="project-image">
+          <img src="./smarttrip-nyc.jpeg" alt="SmartTrip NYC Project">
+          <div class="project-badge">Full-Stack Application</div>
+        </div>
+        <div class="project-content">
+          <h3>SmartTrip NYC - Intelligent Travel Planning</h3>
+          <p class="project-short-desc">
+            Full-stack travel planner with AI recommendations and Google Maps integration.
+          </p>
+          
+          <div class="project-org">
+            <span class="org-badge">🎯 Full-Stack Development</span>
+          </div>
+
+          <div class="project-tech-short">
+            <span class="tech-badge-small">React</span>
+            <span class="tech-badge-small">TypeScript</span>
+            <span class="tech-badge-small">Flask</span>
+            <span class="tech-badge-small">AWS</span>
+          </div>
+
+          <button class="btn btn-primary btn-small view-details-btn" data-project="smarttrip-nyc">View Details</button>
+        </div>
+      </div>
+
+      <!-- Smart Safety Jacket Project -->
+      <div class="project-card" data-category="iot,hardware,embedded">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1600&auto=format&fit=crop" alt="Smart Safety Jacket">
+          <div class="project-badge">Team Innovation — IoT</div>
+        </div>
+        <div class="project-content">
+          <h3>Smart Safety Jacket – Coal Miner Protection</h3>
+          <p class="project-short-desc">
+            IoT solution for real-time health monitoring and safety alerts in mining environments.
+          </p>
+          
+          <div class="project-org">
+            <span class="org-badge">🏭 Industrial Safety</span>
+          </div>
+
+          <div class="project-tech-short">
+            <span class="tech-badge-small">Embedded C</span>
+            <span class="tech-badge-small">IoT</span>
+            <span class="tech-badge-small">Arduino</span>
+            <span class="tech-badge-small">GSM/RFID</span>
+          </div>
+
+          <button class="btn btn-primary btn-small view-details-btn" data-project="smart-jacket">View Details</button>
+        </div>
+      </div>
+
+      <!-- Forge Capacitance Fuel-Level Sensing -->
+      <div class="project-card" data-category="iot,hardware,embedded">
+        <div class="project-image">
+          <img src="./forge-fuel-sensor.jpeg" alt="Forge fuel level prototype">
+          <div class="project-badge">Prototype — Lab-tested</div>
+        </div>
+        <div class="project-content">
+          <h3>Capacitance-based Fuel Level Sensing</h3>
+          <p class="project-short-desc">
+            Non-intrusive sensing solution for vehicle fuel tanks using capacitance measurements.
+          </p>
+          
+          <div class="project-org">
+            <span class="org-badge">🔧 Prototype Lab (Forge)</span>
+          </div>
+
+          <div class="project-tech-short">
+            <span class="tech-badge-small">Embedded C</span>
+            <span class="tech-badge-small">Arduino</span>
+            <span class="tech-badge-small">Signal Processing</span>
+            <span class="tech-badge-small">Python</span>
+          </div>
+
+          <button class="btn btn-primary btn-small view-details-btn" data-project="forge-fuel">View Details</button>
+        </div>
+      </div>
+
+      <!-- OWASP Juice Shop -->
+      <div class="project-card" data-category="security">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1600&auto=format&fit=crop" alt="Cybersecurity">
+          <div class="project-badge">Internship — Demo Video</div>
+        </div>
+        <div class="project-content">
+          <h3>OWASP Juice Shop – Cybersecurity</h3>
+          <p class="project-short-desc">
+            Web app vulnerability discovery and exploitation with secure fixes demonstration.
+          </p>
+
+          <div class="project-org">
+            <span class="org-badge">🏢 Indian Servers Company</span>
+          </div>
+
+          <div class="project-tech-short">
+            <span class="tech-badge-small">Burp Suite</span>
+            <span class="tech-badge-small">OWASP ZAP</span>
+            <span class="tech-badge-small">Penetration Testing</span>
+            <span class="tech-badge-small">Security</span>
+          </div>
+
+          <button class="btn btn-primary btn-small view-details-btn" data-project="juice-shop">View Details</button>
+          <!-- Local video play button -->
+          <button class="btn btn-secondary btn-small" data-video="./videos/juice-shop-demo.mp4">▶ Play Demo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Details Modal -->
+<div id="projectModal" class="project-modal" aria-hidden="true" role="dialog">
+  <div class="project-modal-backdrop" id="projectBackdrop"></div>
+  <div class="project-modal-content" role="document">
+    <button class="project-modal-close" id="closeProjectModal" aria-label="Close">✕</button>
+    <div id="projectModalBody">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+</div>
+    <!-- Achievements Section (cards + filters) -->
+    <section id="achievements" class="achievements-section">
+        <div class="container">
+            <h2>Achievements</h2>
+            <p class="section-subtitle">Selected awards, internships, certifications and industry recognitions</p>
+
+            <div class="achievements-filter" id="achFilter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Academic Achievement">Academic</button>
+                <button class="filter-btn" data-filter="Competition & Innovation">Competition</button>
+                <button class="filter-btn" data-filter="Professional Certification">Certifications</button>
+                <button class="filter-btn" data-filter="Research & Internship">Research</button>
+                <button class="filter-btn" data-filter="Industry Exposure">Industry</button>
+                <button class="filter-btn" data-filter="Entrepreneurship">Entrepreneurship</button>
+                <button class="filter-btn" data-filter="Continuous Learning">Learning</button>
+                <button class="filter-btn" data-filter="Award & Recognition">Awards</button>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card" data-category="Academic Achievement" id="undergraduate-rank">
+                    <div class="achievement-head">
+                        <h3>7th Rank – Overall Department</h3>
+                        <div class="date-badge">Undergraduation (All Four Years)</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">Undergraduate Institution</span>
+                        <span class="achievement-tag">Academic Achievement</span>
+                    </div>
+                    <p class="achievement-desc">Achieved 7th rank overall in the department across all four years, reflecting consistent academic excellence and dedication. Earned formal recognition and a departmental prize for sustained high performance.</p>
+                </div>
+                <div class="achievement-card" data-category="Competition & Innovation" id="hackathon-winner">
+                    <div class="achievement-head">
+                        <h3>Hackathon Winner – First Place</h3>
+                        <div class="date-badge">Undergraduation</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">Undergraduate College</span>
+                        <span class="achievement-tag">Competition & Innovation</span>
+                    </div>
+                    <p class="achievement-desc">Secured first position in a college hackathon, demonstrating strong problem-solving, teamwork, and innovation. Regular participant in hackathons and ideathons with multiple prizes and recognition for technical creativity.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Professional Certification" id="cybersecurity-certifications">
+                    <div class="achievement-head">
+                        <h3>Cybersecurity & Networking Certifications</h3>
+                        <div class="date-badge">Undergraduation</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">IBM & Cisco</span>
+                        <span class="achievement-tag">Professional Certification</span>
+                    </div>
+                    <p class="achievement-desc">Completed certifications including IBM Cybersecurity Fundamentals and Cisco's Introduction to Cybersecurity and Networking, strengthening practical security and networking knowledge.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Research & Internship" id="isro-internship">
+                    <div class="achievement-head">
+                        <h3>Research Internship – Department of Space (NRL)</h3>
+                        <div class="date-badge">Undergraduation</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">ISRO / Department of Space, India</span>
+                        <span class="achievement-tag">Research & Internship</span>
+                    </div>
+                    <p class="achievement-desc">Selected for a competitive internship under ISRO's NRL body. Collaborated with scientists on research-driven projects, gaining exposure to high-impact scientific work and professional research practice.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Industry Exposure" id="aws-new-relic-event">
+                     <div class="achievement-head">
+                        <h3>AWS x New Relic Industry Event</h3>
+                        <div class="date-badge">Post-Undergraduation</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">AWS & New Relic</span>
+                        <span class="achievement-tag">Industry Exposure</span>
+                    </div>
+                    <p class="achievement-desc">Attended an exclusive AWS & New Relic event, engaged with industry experts and Amazon engineers, and gained hands-on insights into cloud systems and observability tools. Notably the youngest participant.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Entrepreneurship" id="startup-ide-bootcamp">
+                    <div class="achievement-head">
+                        <h3>Startup Selected for IDE Bootcamp</h3>
+                        <div class="date-badge">Post-Undergraduation</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">Government of India</span>
+                        <span class="achievement-tag">Entrepreneurship</span>
+                    </div>
+                    <p class="achievement-desc">Founded a startup shortlisted for the IDE Bootcamp by the Government of India. Pitched to senior experts, received strategic feedback, and gained exposure to startup growth and leadership.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Continuous Learning" id="additional-certifications">
+                    <div class="achievement-head">
+                        <h3>Advanced Technical & Professional Certifications</h3>
+                        <div class="date-badge">Ongoing</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">NPTEL, AWS & Other Platforms</span>
+                        <span class="achievement-tag">Continuous Learning</span>
+                    </div>
+                    <p class="achievement-desc">Completed and continuing certifications on NPTEL, AWS, and other platforms to reinforce cloud, engineering, and applied technology skills — demonstrating commitment to lifelong learning.</p>
+                </div>
+
+                <div class="achievement-card" data-category="Award & Recognition" id="ucd-advantage-award">
+                    <div class="achievement-head">
+                        <h3>UCD Advantage Award</h3>
+                        <div class="date-badge">2024–2025</div>
+                    </div>
+                    <div class="achievement-meta">
+                        <span class="meta-org">University College Dublin</span>
+                        <span class="achievement-tag">Award & Recognition</span>
+                    </div>
+                    <p class="achievement-desc">Awarded the UCD Advantage Award for 2024–2025 in recognition of meaningful engagement beyond academics — reflecting leadership, extracurricular impact, and professional development.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+<section id="skills" class="skills">
+  <div class="container">
+    <h2>Skills & Technologies</h2>
+    <p class="section-subtitle">Comprehensive technical expertise across full-stack development, AI/ML, and cloud platforms</p>
+    
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">💻 Frontend Development</h3>
+        <div class="skill-items">
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">TypeScript</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">TailwindCSS</span>
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+          <span class="skill-badge">Responsive Design</span>
+          <span class="skill-badge">LeafletJS</span>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">⚙️ Backend Development</h3>
+        <div class="skill-items">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">Flask</span>
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Express.js</span>
+          <span class="skill-badge">Spring Boot</span>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">REST APIs</span>
+          <span class="skill-badge">GraphQL</span>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">🗄️ Databases</h3>
+        <div class="skill-items">
+          <span class="skill-badge">PostgreSQL</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">SQLite</span>
+          <span class="skill-badge">MongoDB</span>
+          <span class="skill-badge">Firebase</span>
+          <span class="skill-badge">Redis</span>
+          <span class="skill-badge">Database Design</span>
+        </div>
+      </div>
+
+      <!-- AI/ML -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">🤖 AI & Machine Learning</h3>
+        <div class="skill-items">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">TensorFlow</span>
+          <span class="skill-badge">scikit-learn</span>
+          <span class="skill-badge">XGBoost</span>
+          <span class="skill-badge">Pandas</span>
+          <span class="skill-badge">NumPy</span>
+          <span class="skill-badge">Jupyter</span>
+          <span class="skill-badge">Data Analysis</span>
+        </div>
+      </div>
+
+      <!-- Cloud & DevOps -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">☁️ Cloud & DevOps</h3>
+        <div class="skill-items">
+          <span class="skill-badge">AWS EC2</span>
+          <span class="skill-badge">AWS RDS</span>
+          <span class="skill-badge">AWS S3</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">Docker Compose</span>
+          <span class="skill-badge">Linux</span>
+          <span class="skill-badge">CI/CD</span>
+          <span class="skill-badge">GitHub Actions</span>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">🛠️ Tools & Platforms</h3>
+        <div class="skill-items">
+          <span class="skill-badge">Git & GitHub</span>
+          <span class="skill-badge">VS Code</span>
+          <span class="skill-badge">Postman</span>
+          <span class="skill-badge">Figma</span>
+          <span class="skill-badge">Jira</span>
+          <span class="skill-badge">Slack</span>
+          <span class="skill-badge">npm & pip</span>
+          <span class="skill-badge">Command Line</span>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">🔐 Security & Networking</h3>
+        <div class="skill-items">
+          <span class="skill-badge">JWT Authentication</span>
+          <span class="skill-badge">OAuth 2.0</span>
+          <span class="skill-badge">HTTPS/SSL</span>
+          <span class="skill-badge">SQL Injection Prevention</span>
+          <span class="skill-badge">Burp Suite</span>
+          <span class="skill-badge">OWASP</span>
+          <span class="skill-badge">Networking Basics</span>
+          <span class="skill-badge">Cybersecurity</span>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skill-category">
+        <h3 class="skill-category-title">💡 Soft Skills</h3>
+        <div class="skill-items">
+          <span class="skill-badge">Problem Solving</span>
+          <span class="skill-badge">Team Collaboration</span>
+          <span class="skill-badge">Communication</span>
+          <span class="skill-badge">Project Management</span>
+          <span class="skill-badge">Agile Methodology</span>
+          <span class="skill-badge">Leadership</span>
+          <span class="skill-badge">Mentoring</span>
+          <span class="skill-badge">Time Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-card-icon">📞</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+353899580651" class="contact-value">+353 89 958 0651</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">✉️</div>
+                    <h3>Email</h3>
+                    <a href="mailto:charansingu09@gmail.com" class="contact-value">charansingu09@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-card-icon">📍</div>
+                    <h3>Location</h3>
+                    <p class="contact-value">Dublin, Ireland</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send Me a Message</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                </form>
+                <p class="form-note">I'll get back to you as soon as possible!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Charan Chowdary Singu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- main script + modal handlers -->
+    <script src="./script.js"></script>
+    <script>
+    // Ensure modal logic runs after DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+        const openBtn = document.getElementById('openJuiceVideo');
+        const closeBtn = document.getElementById('closeJuiceVideo');
+        const modal = document.getElementById('videoModal');
+        const backdrop = document.getElementById('videoBackdrop');
+        const juiceVideo = document.getElementById('juiceVideo');
+
+        function openModal() {
+            if (!modal) return;
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            try { juiceVideo.currentTime = 0; juiceVideo.play(); } catch (e) {}
+        }
+
+        function closeModal() {
+            if (!modal) return;
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            try { juiceVideo.pause(); juiceVideo.currentTime = 0; } catch (e) {}
+        }
+
+        if (openBtn) openBtn.addEventListener('click', openModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (backdrop) backdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    });
+    </script>
+
+    <!-- Add this once near the end of body, before </body> -->
+<div id="videoModal" class="video-modal" aria-hidden="true" role="dialog">
+  <div id="videoBackdrop" class="video-modal-backdrop"></div>
+  <div class="video-modal-content">
+    <button id="closeVideoModal" class="video-modal-close" aria-label="Close">✕</button>
+    <div id="videoModalBody"></div>
+  </div>
+</div>
+</body>
+</html>
